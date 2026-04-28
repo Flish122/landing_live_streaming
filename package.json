@@ -1,0 +1,24 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "landing page",
+  "homepage": "https://github.com/Flish122/landing_live_streaming#readme",
+  "bugs": {
+    "url": "https://github.com/Flish122/landing_live_streaming/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flish122/landing_live_streaming.git"
+  },
+  "license": "ISC",
+  "author": "Yaroslav",
+  "type": "commonjs",
+  "source": "inde.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "sass": "^1.99.0"
+  }
+}
