@@ -30,6 +30,10 @@ figure {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -45,7 +49,7 @@ figure {
   color: #fff;
 }
 
-.header .nav .globe__link-icon:hover {
+.header .nav .globe__link-icon:hover, .mobile-navigation__burger-icon:hover, .mobile-navigation .nav__close-icon:hover {
   cursor: pointer;
   fill: #000;
 }
@@ -150,6 +154,77 @@ figure {
   width: 27px;
   height: 28px;
   fill: #fff;
+}
+@media (max-width: 768px) {
+  .header .nav__links,
+  .header .nav .covid,
+  .header .nav .globe {
+    display: none;
+  }
+}
+
+.mobile-navigation {
+  display: none;
+}
+.mobile-navigation__burger {
+  position: absolute;
+  z-index: 10px;
+  top: 13px;
+  right: 20px;
+}
+.mobile-navigation__burger-icon {
+  width: 33px;
+  height: 22px;
+  stroke: #fff;
+}
+.mobile-navigation__toggler {
+  display: none;
+}
+.mobile-navigation__toggler:checked + .nav {
+  translate: 0;
+}
+.mobile-navigation .nav {
+  padding: 100px 70px 0;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  translate: 100% 0;
+  transition: translate 0.22s;
+}
+.mobile-navigation .nav__list {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 20px;
+}
+.mobile-navigation .nav__list-item-link {
+  font-size: 36px;
+  font-width: 400;
+  font-style: normal;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.mobile-navigation .nav__close {
+  position: absolute;
+  z-index: 10;
+  top: 18px;
+  right: 23px;
+}
+.mobile-navigation .nav__close-icon {
+  width: 25px;
+  height: 22px;
+  stroke: #fff;
+}
+@media (max-width: 768px) {
+  .mobile-navigation {
+    display: block;
+  }
 }
 
 .hero {
